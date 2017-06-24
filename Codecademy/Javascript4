@@ -1,0 +1,13 @@
+//5, Introduction to 'While' Loops in JS
+
+/* Print I'm looping 3 times */
+
+var loop = function(){
+    var i = 0
+	while(i < 3){
+		console.log("I'm looping!");
+		i++;
+	}
+};
+
+loop();
