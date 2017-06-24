@@ -1,4 +1,4 @@
-//5, Introduction to 'While' Loops in JS
+//5
 
 /* Print I'm looping 3 times */
 
@@ -11,3 +11,45 @@ var loop = function(){
 };
 
 loop();
+
+//6
+
+/* Print once, set true var to false to end loop */
+
+i = true;
+var soloLoop = function(){
+  while ( i === true) {
+      console.log("Looped once!");
+      i = false;
+  }
+};
+
+soloLoop();
+
+//10
+
+/* Do and while loops */
+
+var getToDaChoppa = function(){
+var i = false;
+  do {
+      console.log("helicopter baby");
+  } while (i)
+};
+
+getToDaChoppa();
+
+//11
+
+/* Review all loops */
+
+var i = 0;
+var j = "cake";
+
+do {
+    console.log("this is my " + j);
+} while (i >= 1);
+
+for ( i; i<j.length; i++) {
+    console.log(i);
+}
