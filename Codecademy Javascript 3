@@ -1,6 +1,6 @@
-#/* Searches the text string for the first letter of myName, then appends and returns that and the next 4 letters. This version assumes that is sufficient to find the letters of myName (but it's not) */
+/* Searches the text string for the first letter of myName, then appends and returns that and the next 4 letters. This version assumes that is sufficient to find the letters of myName (but it's not) */
 
-`/*jshint multistr:true */
+/*jshint multistr:true */
 var text = "daisy kumi rin din daisy chicken";
 var myName = "daisy";
 var hits = [];
@@ -18,11 +18,11 @@ if (hits.length === 0) {
     console.log("Your name wasn't found!");
 } else {
     console.log(hits);
-}`
+}
 
-#/* This version searches for the first letter of myName, confirms the following characters up to the length of myName match, then returns myName the number of times it is found in the string. */
+/* This version searches for the first letter of myName, confirms the following characters up to the length of myName match, then returns myName the number of times it is found in the string. */
 
-`/*jshint multistr:true */
+/*jshint multistr:true */
 var text = "daisy kumi rin din daisy chicken";
 var myName = "daisy";
 var hits = [];
@@ -43,5 +43,5 @@ for (var i = 0; i < text.length; i++) {
         }
     }
 }
-    console.log(hits);`
+    console.log(hits);
   
