@@ -45,3 +45,32 @@ for (var i = 0; i < text.length; i++) {
 }
     console.log(hits);
   
+/* This version searches for the first letter of myName, confirms the following characters up to the length of myName match, then returns myName the number of times it is found in the string, along with the number of instances. */
+
+
+/*jshint multistr:true */
+var text = "daisy kumi rin din daisy chicken";
+var myName = "daisy";
+var hits = [];
+//goes through the text
+for (var i = 0; i < text.length; i++) {
+    //if 'd' is found
+    if (text[i] === myName[0]) {
+            //var to check for exact match
+            var exact = 0;
+            var count = 1;
+        //check each letter pulled
+        for (var j = 0; j < myName.length; j++) {
+            if (myName[j] === text[j+i]) {
+                exact++;
+                if (exact === myName.length) {
+                hits.push(myName);
+                count++;
+                }
+            }
+        }
+    }
+}
+    console.log(hits);
+    console.log("Your name appears in the string " + count + " times.");
+    
