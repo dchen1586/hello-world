@@ -1,0 +1,112 @@
+//1; return true if number is divisible by 2
+
+var isEven = function(number) {
+  if (number % 2 === 0) {
+      return true;
+  } else {
+      return false;
+  }  
+};
+
+//2; return string if number isn't a number
+
+var i = "your input isn't a number!";
+
+var isEven = function(number) {
+  if (number % 2 === 0) {
+      return true;
+  } else if (isNaN(number)) {
+      return i;
+  } else {
+      return false;
+  }  
+};
+
+//3; for and while loop ex
+
+for (var i = 0; i < 4; i++) {
+    console.log("huzzah!");
+}
+
+
+var i = true;
+while (i) {
+    console.log("huzzah!");
+    i = false;
+}
+
+//7; switch practice
+
+var answer = prompt("What is your favorite animal?");
+
+switch(answer) {
+  case 'dog':
+    console.log("mine too!");
+    break;
+  case 'cat':
+    console.log("they're ok!");
+    break;
+  default:
+    console.log("i don't want to type more so that's cool!");
+}
+
+//8; write your own switch
+
+var color = prompt("what is your fav color?");
+
+switch (color) {
+    case "red":
+    console.log("awesome");
+    break;
+    
+    case "blue": 
+    console.log("ok");
+    break; 
+    
+    case "yellow": 
+    console.log("ok");
+    break; 
+    
+    default:
+    console.log("you can only have primary colors as your favorite color!");
+    break; 
+    
+}
+
+//11; and operator
+
+var hungry = true;
+var foodHere = true;
+
+var eat = function() {
+  if (hungry && foodHere) {
+      return true;
+  } else {
+      return false;
+  }  
+};
+
+//12; or operator
+
+var tired = true;
+var bored = false;
+
+var nap = function() {
+    if (tired || bored) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+//13; not operator
+
+var programming = false;
+
+var happy = function() {
+    if (programming !== false) {
+        return false;
+    } else {
+        return true;
+    }
+};
