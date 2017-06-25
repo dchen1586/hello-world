@@ -110,3 +110,53 @@ var happy = function() {
         return true;
     }
 };
+
+//Code your own adventure 4; switch
+
+var user = prompt("Would you like an apple, an orange, or a banana?").toLowerCase();
+
+switch (user) {
+    case 'apple':
+    console.log("apple a day keeps the doctor away");
+    break;
+    
+    case 'orange':
+    console.log("orange you glad to see me");
+    break;
+    
+    case 'banana':
+    console.log("banana-rama");
+    break;
+    
+    default:
+    console.log("i only have apples, oranges and bananas");
+}
+
+//Code your own adventure 5; logic operators
+
+var user = prompt("Would you like an apple, an orange, or a banana?").toLowerCase();
+
+switch (user) {
+    case 'apple':
+        if (0+0 === 0 && 1*1 ===1) {
+            console.log("apple a day keeps the doctor away"); 
+        } else {
+            console.log("cest imposible"); 
+        }
+    break;
+    
+    case 'orange':
+        if (1+1 === 2 || 1*0 === 1) {
+            console.log("orange you glad to see me");
+        } else {
+            console.log("it's brokennn"); 
+        }
+    break;
+    
+    case 'banana':
+    console.log("banana-rama");
+    break;
+    
+    default:
+    console.log("i only have apples and oranges");
+}
