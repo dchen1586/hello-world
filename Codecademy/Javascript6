@@ -1,0 +1,122 @@
+//2 array access by offset
+
+var languages = ["HTML", "CSS", "JavaScript", "Python", "Ruby"];
+console.log(languages[2]);
+
+//3 
+
+var languages = ["HTML", "CSS", "JavaScript", "Python", "Ruby"];
+console.log(languages[2]);
+console.log(languages.length);
+
+//4
+
+var languages = ["HTML", "CSS", "JavaScript", "Python", "Ruby"];
+
+for (i = 0; i < languages.length; i++) {
+    console.log(languages[i]);
+}
+
+//11 object. note that there is something about object literal notation with the object() vs {}. confirm how that works later.
+
+var me = new Object();
+
+me.name = "Daisy";
+me.age = 28;
+
+//14
+
+var myObject = {
+    name: "Daisy",
+    age: 28
+}
+var myArray = [1, true, "sprite", myObject];
+
+//15
+
+var obj = new Object();
+obj.name = "Daisy";
+obj.age = 28;
+
+var newArray = [[obj, 2, "string"], [true, 3]];
+
+//16
+
+var myObject = {
+  name: 'Eduardo',
+  type: 'Most excellent',
+  interests: ['running', 'swimming']
+};
+
+//17
+
+var myOwnObject = new Object();
+myOwnObject.name = "Daisy";
+myOwnObject.age = 28;
+myOwnObject.ethn = "Chinese";
+
+//Contact List project
+
+//V1
+
+var friends = {};
+
+friends.bill = {
+        firstName: "Bill",
+        lastName: "Gates",
+        number: "555-555-5555",
+        address: ['One Microsoft Way','Redmond','WA','98052']
+};
+friends.steve = {
+        firstName: "Steve",
+        lastName: "Jobs",
+        number: "555-555-5556",
+        address: ['1 Infinite Loop', 'Cupertino', 'CA', '95050']
+};
+
+var list = function(friends) {
+    for (var firstName in friends) {
+        console.log(firstName)
+    }
+}
+
+var search = function (name) {
+    for(var x in friends) {
+        if(friends[x].firstName === name) {
+            console.log(friends[x]);
+            return friends[x];
+        }
+    }     
+}
+
+//V2
+
+var friends = {
+    bill: {
+        firstName: "Bill",
+        lastName: "Gates",
+        number: "555-555-5555",
+        address: ['One Microsoft Way','Redmond','WA','98052']
+    },
+    steve: {
+        firstName: "Steve",
+        lastName: "Jobs",
+        number: "555-555-5556",
+        address: ['1 Infinite Loop', 'Cupertino', 'CA', '95050']
+    }
+};
+
+var list = function(friends) {
+    for (var firstName in friends) {
+        console.log(firstName)
+    }
+}
+
+var search = function (name) {
+    for(var x in friends) {
+        if(friends[x].firstName === name) {
+            console.log(friends[x]);
+            return friends[x];
+        }
+    }     
+}
