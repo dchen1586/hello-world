@@ -264,3 +264,147 @@ function Dog(age, breed, color) {
 
 //23
 
+function Person(name,age) {
+  this.name = name;
+  this.age = age;
+  this.species = "Homo Sapiens";
+}
+
+var sally = new Person("Sally Bowles", 39);
+var holden = new Person("Holden Caulfield", 16);
+console.log("sally's species is " + sally.species + " and she is " + sally.age);
+console.log("holden's species is " + holden.species + " and he is " + holden.age);
+
+//24
+
+function Rectangle(height, width) {
+  this.height = height;
+  this.width = width;
+  this.calcArea = function() {
+      return this.height * this.width;
+  };
+  // put our perimeter function here!
+  this.calcPerimeter = function() {
+      return this.height*2 + this.width*2;
+  };
+}
+
+var rex = new Rectangle(7,3);
+var area = rex.calcArea();
+var perimeter = rex.calcPerimeter();
+
+//25
+
+function Rabbit(adjective) {
+    this.adjective = adjective;
+    this.describeMyself = function() {
+        console.log("I am a " + this.adjective + " rabbit");
+    };
+}
+
+// now we can easily make all of our rabbits
+var rabbit1 = new Rabbit("fluffy");
+var rabbit2 = new Rabbit("happy");
+var rabbit3 = new Rabbit("sleepy");
+rabbit1.describeMyself("fluffy");
+rabbit2.describeMyself("happy");
+rabbit3.describeMyself("sleepy");
+
+//26
+
+// Our person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Now we can make an array of people
+var family = new Array();
+family[0] = new Person("alice", 40);
+family[1] = new Person("bob", 42);
+family[2] = new Person("michelle", 8);
+// add the last family member, "timmy", who is 6 years old
+family[3] = new Person("timmy", 6);
+
+//27
+
+// Our Person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Now we can make an array of people
+var family = [];
+family[0] = new Person("alice", 40);
+family[1] = new Person("bob", 42);
+family[2] = new Person("michelle", 8);
+family[3] = new Person("timmy", 6);
+
+// loop through our new array
+for (var i = 0; i < family.length; i++){
+    console.log(family[i].name);
+}
+
+//28
+
+// Our person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// We can make a function which takes persons as arguments
+// This one computes the difference in ages between two people
+var ageDifference = function(person1, person2) {
+    return person1.age - person2.age;
+}
+
+var alice = new Person("Alice", 30);
+var billy = new Person("Billy", 25);
+
+// get the difference in age between alice and billy using our function
+var diff = ageDifference(alice, billy);
+
+//29
+
+// Our person constructor
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// We can make a function which takes persons as arguments
+// This one computes the difference in ages between two people
+var ageDifference = function(person1, person2) {
+    return person1.age - person2.age;
+};
+
+// Make a new function, olderAge, to return the age of
+// the older of two people
+var olderAge = function(person1, person2) {
+    if (person1.age > person2.age) {
+        return person1.age;
+    } else {
+        return person2.age;
+    }
+};
+
+// Let's bring back alice and billy to test our new function
+var alice = new Person("Alice", 30);
+var billy = new Person("Billy", 25);
+
+console.log("The older person is " + olderAge(alice, billy));
+
+//30
+
+var spencer = {
+  age: 22,
+  country: "United States"
+};
+
+// make spencer2 here with constructor notation
+var spencer2 = new Object();
+    spencer2.age = 22;
+    spencer2.country = "United States";
+    
