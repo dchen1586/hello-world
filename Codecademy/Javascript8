@@ -1,185 +1,111 @@
 //1
 
-var bob = {
-    firstName: "Bob",
-    lastName: "Jones",
-    phoneNumber: "(650) 777-777",
-    email: "bob.jones@example.com"
+var james = {
+    job: "programmer",
+    married: false
 };
 
-console.log(bob.firstName);
-console.log(bob.lastName);
-console.log(bob.email);
+function Person(job, married) {
+    this.job = job;
+    this.married = married;
+}
+
+// create a "gabby" object using the Person constructor!
+var gabby = new Person("student", true);
 
 //2
 
-var bob = {
-    firstName: "Bob",
-    lastName: "Jones",
-    phoneNumber: "(650) 777-7777",
-    email: "bob.jones@example.com"
-};
+function Person(job, married) {
+    this.job = job;
+    this.married = married;
+    this.speak = function (){
+        console.log("Hello!");
+    }
+    
+}
 
-var mary = {
-    firstName: "Mary",
-    lastName: "Johnson",
-    phoneNumber: "(650) 888-8888",
-    email: "mary.johnson@example.com"
-};
-
-var contacts = [bob, mary];
-
-console.log(contacts[1].phoneNumber); // or (mary.phoneNumber)
+var user = new Person("Codecademy Student",false);
+user.speak();
 
 //3
 
-var bob = {
-    firstName: "Bob",
-    lastName: "Jones",
-    phoneNumber: "(650) 777-7777",
-    email: "bob.jones@example.com"
+var james = {
+    job: "programmer",
+    married: false,
+    speak: function(speak) {
+        console.log("Hello, I am feeling " + speak);
+    }
 };
 
-var mary = {
-    firstName: "Mary",
-    lastName: "Johnson",
-    phoneNumber: "(650) 888-8888",
-    email: "mary.johnson@example.com"
-};
-
-var contacts = [bob, mary];
-
-// printPerson added here
-function printPerson (person) {
-    console.log(person.firstName + " " + person.lastName);
-}
-
-printPerson(contacts[0]);
-printPerson(contacts[1]);
+james.speak("great");
+james.speak("just okay");
 
 //4
 
-var bob = {
-    firstName: "Bob",
-    lastName: "Jones",
-    phoneNumber: "(650) 777-7777",
-    email: "bob.jones@example.com"
-};
-
-var mary = {
-    firstName: "Mary",
-    lastName: "Johnson",
-    phoneNumber: "(650) 888-8888",
-    email: "mary.johnson@example.com"
-};
-
-var contacts = [bob, mary];
-
-function printPerson(person) {
-    console.log(person.firstName + " " + person.lastName);
-}
-
-function list () {
-    var contactsLength;
-    for (var contactsLength = 0; contactsLength < contacts.length; contactsLength++) {
-        printPerson(contacts[contactsLength]);
+var james = {
+    job: "programmer",
+    married: false,
+    sayJob: function() {
+        console.log("Hi, I work as a " + james.job);
+        
     }
 };
 
-list();
+// james' first job
+james.sayJob();
+
+// change james' job to "super programmer" here
+james.job = "super programmer";
+
+// james' second job
+james.sayJob();
 
 //5
 
-var bob = {
-    firstName: "Bob",
-    lastName: "Jones",
-    phoneNumber: "(650) 777-7777",
-    email: "bob.jones@example.com"
+var james = {
+    job: "programmer",
+    married: false
 };
 
-var mary = {
-    firstName: "Mary",
-    lastName: "Johnson",
-    phoneNumber: "(650) 888-8888",
-    email: "mary.johnson@example.com"
-};
+// set to the first property name of "james"
+var aProperty = "job";
 
-var contacts = [bob, mary];
-
-function printPerson(person) {
-    console.log(person.firstName + " " + person.lastName);
-}
-
-function list() {
-	var contactsLength = contacts.length;
-	for (var i = 0; i < contactsLength; i++) {
-		printPerson(contacts[i]);
-	}
-}
-
-/*Create a search function
-then call it passing "Jones"*/
-function search(lastName) {
-    var contactsLength = contacts.length;
-    for (var i = 0; i < contactsLength; i++) {
-        if(contacts[i].lastName === lastName){
-            printPerson(contacts[i]);
-        }
-	}
-}
-	
-search("Jones");
+// print the value of the first property of "james" 
+// using the variable "aProperty"
+console.log(james[aProperty]);
 
 //6
 
-var bob = {
-    firstName: "Bob",
-    lastName: "Jones",
-    phoneNumber: "(650) 777-7777",
-    email: "bob.jones@example.com"
+// complete these definitions so that they will have
+// the appropriate types
+var anObj = { job: "I'm an object!" };
+var aNumber = 42;
+var aString = "I'm a string!";
+
+console.log(typeof anObj); // should print "object"
+console.log(typeof aNumber ); // should print "number"
+console.log(typeof aString); // should print "string"
+
+//7
+
+var myObj = {
+    name: "chicken"
 };
 
-var mary = {
-    firstName: "Mary",
-    lastName: "Johnson",
-    phoneNumber: "(650) 888-8888",
-    email: "mary.johnson@example.com"
+console.log( myObj.hasOwnProperty('name') ); // should print true
+console.log( myObj.hasOwnProperty('nickname') ); // should print false
+
+//8
+
+var suitcase = {
+    shirt: "Hawaiian"
 };
-
-var contacts = [bob, mary];
-
-function printPerson(person) {
-    console.log(person.firstName + " " + person.lastName);
+if (suitcase.hasOwnProperty("shorts") === true) {
+    console.log(suitcase.shorts);
+} else {
+    suitcase.shorts = "yay";
+    console.log(suitcase.shorts);
 }
 
-function list() {
-	var contactsLength = contacts.length;
-	for (var i = 0; i < contactsLength; i++) {
-		printPerson(contacts[i]);
-	}
-}
+//9
 
-/*Create a search function
-then call it passing "Jones"*/
-function search(lastName) {
-    var contactsLength = contacts.length;
-    for (var i = 0; i < contactsLength; i++) {
-        if(contacts[i].lastName === lastName){
-            printPerson(contacts[i]);
-        }
-	}
-}
-
-
-function add(firstName, lastName, email, phoneNumber) {
-    contacts[contacts.length] = {
-        firstName: firstName,
-        lastName: lastName,
-        phoneNumber: phoneNumber,
-        email: email
-    }
-}
-
-add("John", "Smith", "jsmith@example.com", "555-555-5555");
-
-list();
