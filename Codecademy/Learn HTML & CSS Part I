@@ -26,3 +26,129 @@
   <a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank"><img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/web101-image_brownbear.jpg" alt="a photo of a brown bear"/></a>
 </body> 
 </html>
+
+//Colors, 5
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #f7f7f7;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #f7f7f7 0%, #EAE0D5 100%);
+}
+
+/** Header styles **/
+
+.header {
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-4/htmlcss1-img_coffee-bgnd.jpeg");
+  height: 400px;
+  background-position: center center;
+  color: #452F73;
+}
+
+h1 {
+  
+  
+  font-family: 'Covered By Your Grace', sans-serif;
+  font-size: 100px;
+  line-height: 76px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  top: 20%;
+}
+
+/** List style **/
+
+h2 {
+  color: #E4BB97;
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+  background-color: #AA8EB5;
+}
+
+ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 50%;
+}
+
+li {
+  border-bottom: 1px solid #E4BB97;
+  list-style: none;
+  margin: 100px 0px;
+  padding-bottom: 60px;
+}
+
+p {
+  color: #444444;
+  line-height: 32px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+a {
+  color: #214E34;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+/*
+color: hsl(350, 58.8%, 42.0%);
+color: rgba(2, 93, 140, .9); OR hsla
+
+font-family: Georgia, Garamond, serif;
+font-family: Helvetica, Arial, sans-serif;
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:100" type="text/css" rel="stylesheet">
+    
+font-family: "Playfair Display", serif;
+font-size: 20px;
+    
+pixels, percentages and ems.
+body: 12px - 75% - 0.75
+em preferred for line spacing/line height (line-height) and word-spacing (default is 0.25em) and kerning (letter-spacing)
+    
+font-weight: bold or normal or a number 100(thin)-900(bold). 400 is normal
+font-style: italic or normal
+text-transform: uppercase or lowercase
+text-align: left or center or right
+
+ID
+<div  id="header-text"> 
+<h1 id="botswana">Botswana</h1>
+
+#botswana {
+  background-color: #56ABFF;
+}
+
+CLASS
+<div class="partner"> 
+
+.science {
+  font-family: Georgia, Times, serif;
+  color: #A3B4C5;
+  text-transform: uppercase;
+}
+
+select the p elements from the science class:
+p.science { 
+
+selecting more than one class:
+.first, .last {
+
+
+*/
