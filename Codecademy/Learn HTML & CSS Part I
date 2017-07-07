@@ -107,25 +107,30 @@ a {
 }
 
 /*
-color: hsl(350, 58.8%, 42.0%);
-color: rgba(2, 93, 140, .9); OR hsla
+linking to style.css
+<link href="https://www.codecademy.com/stylesheets/style.css" type="text/css" rel="stylesheet">
+<link href="style.css" type="text/css" rel="stylesheet">
 
-font-family: Georgia, Garamond, serif;
-font-family: Helvetica, Arial, sans-serif;
+if writing CSS code in html, use <style></style> within <head></head>
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:100" type="text/css" rel="stylesheet">
-    
-font-family: "Playfair Display", serif;
-font-size: 20px;
-    
-pixels, percentages and ems.
-body: 12px - 75% - 0.75
-em preferred for line spacing/line height (line-height) and word-spacing (default is 0.25em) and kerning (letter-spacing)
-    
-font-weight: bold or normal or a number 100(thin)-900(bold). 400 is normal
-font-style: italic or normal
-text-transform: uppercase or lowercase
-text-align: left or center or right
+color (name, rgb(#,#,#), #_____, hsl(0-360,0-100%,0-100%) hue saturation lightness, rgba() a-opacity, 0-1 inclusive, hsla()
+  multiple color declarations to make sure browser can support one of them
+background-color
+font-family
+  if multiple words, use " "
+  declare a couple at once as fallbacks: Garamond, Times, serif;
+font-size
+  px-pixel em-em %
+  approx 14px - 117% - .875 em
+line-height, typically in ems
+word-spacing, typically 0.25 ems
+letter-spacing (kerning)
+font-weight, normal or bold or 100 (thin), 200, 300, 400 (normal weight), 500, 600, 700, 800, or 900 (bold).
+font-style, normal or italic
+text-transform, uppercase or lowercase
+text-align, left, center, right
+  
+link fonts within the html file in <head>: <link href="https://fonts.googleapis.com/css?family=Raleway" type="text/css" rel="stylesheet" >
 
 ID
 <div  id="header-text"> 
@@ -144,11 +149,41 @@ CLASS
   text-transform: uppercase;
 }
 
+all science classes
+.science {
+
 select the p elements from the science class:
 p.science { 
 
 selecting more than one class:
 .first, .last {
 
+<h1 class="book domestic">The Way of the Deep</h1>
+<h1 class="book foreign">A Night in the Sky</h1>
+
+.book {
+  font-family: Georgia, serif;
+}
+
+.domestic {
+  font-color: #0902CC;
+}
+
+.foreign {
+  font-color: #B097DD;
+}
+
+
+border-style property. This property can take on one of the following values:
+
+    solid - border is a solid line.
+    dashed - border is a series of lines or dashes.
+    dotted - border is a series of square dots.
+    double - border is two solid black lines.
+    groove - border is a groove (or carving).
+    inset - border appears to cut into the screen.
+    outset - border appears to pop out of the screen.
+    ridge - border appears as a picture frame.
+    hidden or none
 
 */
