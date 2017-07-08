@@ -173,6 +173,25 @@ selecting more than one class:
   font-color: #B097DD;
 }
 
+<div class="container">
+  <h1 class="title">Alice In Wonderland</h1>
+  <p> ... </p>
+</div>
+
+div.container {
+  background-color: rgb(252, 255, 205);
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+h1.title {
+  color: #0D1A2F;
+}
+
+>>>BOXES
+
+width / height, can be specified with px, em, %. Latter two preferred for scaling.
+min-width / min-height, also max-
+overflow: can be set to hidden or scroll
 
 border-style property. This property can take on one of the following values:
 
@@ -185,5 +204,93 @@ border-style property. This property can take on one of the following values:
     outset - border appears to pop out of the screen.
     ridge - border appears as a picture frame.
     hidden or none
+    
+border-width, set in px OR thin, medium, thick. if different on four sides, then 3px 1px 2px 1px; (top, right, bottom, left). if only individual borders, use the following:
+    border-top-width
+    border-right-width
+    border-bottom-width
+    border-left-width
+
+border-color, same as color above
+
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(22, 77, 100);
+   ^is equivalent to below. make sure to use width style color order
+  border: 3px solid rgb(22, 77, 100);
+
+border-radius, px or %. 100% makes it a circle
+
+padding, space between box and box contents on all 4 sides. it is added to the width and height set for the box, but this can be avoided
+  similarly to border-width, padding can be set differently on all 4 sides 3px 1px 2px 1px; (top, right, bottom, left)
+  if top and bottom, left and right are the same, can denote as 5px 10px; instead of writing out all four
+  
+    padding-top
+    padding-right
+    padding-bottom
+    padding-left
+
+margin, space directly outside box. prevents other elements from being in this space.
+  similarly to border-width, padding can be set differently on all 4 sides 3px 1px 2px 1px; (top, right, bottom, left)
+  shortcut also applies when top/bottom, left/right the same
+  can also be set to auto, which will auto center the element. however, the width of the box must be set first.
+  
+    margin-top
+    margin-right
+    margin-bottom
+    margin-left
+    
+'user agent' stylesheet: web browsers have default stylesheets in case one does not exist. often have defaults; it may make sense to clear these to have a clean slate:
+  * {
+  margin: 0;
+  padding: 0;
+  }
+
+Inline elements, elements that display inline with text, without disrupting the flow of the text (like links).
+Block-level elements, elements that use an entire line of space in a web page and disrupt the natural flow of text. Most of the common HTML elements are block-level elements (headings, paragraphs, divs, and more).
+
+display, can change the behavior of these elements. can take on 4 values:
+    inline - causes block-level elements (like a div) to behave like an inline element (like a link).
+    block - causes inline elements (like a link) to behave like a block element (like a div).
+    inline-block - causes block-level elements to behave like an inline element, but retain the features of a block-level element.
+    none - removes an element from view. The rest of the web page will act as if the element does not exist.
+  example: list as inline, can become a navigation menu
+
+visibility, can take hidden or visible values
+
+display: none and visibility: hidden? An element with display: none will be completely removed from the web page. An element with visibility: hidden, however, will not be visible on the web page, but the space reserved for it will. 
+
+box-sizing, controls the type of box model the browser should use when interpreting a web page. default value is content-box. border-box is the alternative, where the dimensions of the box will always be static
+
+---
+
+block level elements appear on left by default
+
+position, used to specify where elements appear
+    static - the default value (it does not need to be specified)
+    relative - four offset values below can be set to px, em, or %
+      top - moves the element down.
+      bottom - moves the element up.
+      left - moves the element right.
+      right - moves the element left.
+    absolute - other elements will act as if it doesn't exist
+    fixed - element will stay where it is regardless of scrolling
+    
+z-index, controls how far "back" or how far "forward" an element should appear on the web page
+  given an integer value, tells browser order of appearance
+  does not work on static elements
+  bigger numbers are 'in front' of lower numbers
+  
+float, pushes elements to the farthest left/right
+  works on relative and static elements
+  must have width specified, or will take up the entire width of containing element
+  
+clear, specifies how elements should behave when they bump into each other on the page
+    left — the left side of the element will not touch any other element within the same containing element.
+    right — the right side of the element will not touch any other element within the same containing element.
+    both — neither side of the element will touch any other element within the same containing element.
+    none — the element can touch either side.
+
+
 
 */
