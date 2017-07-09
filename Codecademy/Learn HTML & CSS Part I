@@ -347,5 +347,50 @@ background-attachment, can take one of two values:
 When an image communicates important information, you can use the <img> element and style the image using CSS, if needed.
 When an image is intended to style a web page, you can use the background property and further style it with CSS.
 
+<table>
+</table>
+<tr>
+</tr> adds table row
+<td>    </td> table data
+<th>    </th> table heading
+
+scope takes the values of 'col' or 'row', see below
+
+<table>
+  <tr>
+    <th></th>
+    <th scope="col">Saturday</th>
+    <th scope="col">Sunday</th>
+  </tr>
+  <tr>
+    <th scope="row">Temperature</th>
+    <td>73</td>
+    <td>81</td>
+  </tr>
+</table>
+
+set table border in css:
+table, td {
+  border: 1px solid black;
+}
+
+colspan and rowspan
+    <td rowspan="2">Work</td>
+    
+<tbody>
+</tbody>, used to section off code for large tables
+
+<thead>
+</thead>, used to section off table header code
+
+<tfoot>
+</tfoot>, used for footer, usually number totals or similar
+
+setting table styling in css:
+table, th, td {
+  border: 1px solid black;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
 
 */
