@@ -246,7 +246,8 @@ margin, space directly outside box. prevents other elements from being in this s
   padding: 0;
   }
 
-Inline elements, elements that display inline with text, without disrupting the flow of the text (like links).
+Inline elements, elements that 
+inline with text, without disrupting the flow of the text (like links).
 Block-level elements, elements that use an entire line of space in a web page and disrupt the natural flow of text. Most of the common HTML elements are block-level elements (headings, paragraphs, divs, and more).
 
 display, can change the behavior of these elements. can take on 4 values:
@@ -291,6 +292,60 @@ clear, specifies how elements should behave when they bump into each other on th
     both — neither side of the element will touch any other element within the same containing element.
     none — the element can touch either side.
 
+<img src="#" alt="A red leaf" class="leaf" />
+img.leaf {
+  width: 350px;
+  height: 200px; 
+}
+
+images are in-line, but to be centered correctly, need to be recharacterized as block elements. make sure to change display type to block when centering
+can use float for aligning left or right
+
+background-image: url(" ... ");
+  background-image: -webkit-linear-gradient(#FFD194, #BC1324); this will create a color gradient background
+
+background-repeat, images tile by default; use to avoid/customize this behavior
+    repeat - the default value — the image will repeat horizontally and vertically.
+    repeat-x - the background image will be repeated only along the x-axis (horizontally).
+    repeat-y - the background image will be repeated only along the y-axis (vertically).
+    no-repeat - the background image will not be repeated at all and will appear only once.
+    
+background-position, values are denoted with two words. if only one is specified, the second will default to center
+    left top - top left corner of the element's box.
+    center top - top center of the element's box.
+    right top - top right corner of the element's box.
+    left center - left column, center row.
+    center center - the center of the element's box.
+    right center - right column, center row.
+    left bottom - bottom left corner of the element's box.
+    center bottom - bottom center of the element's box.
+    right bottom - bottom right corner of the element's box.
+
+all three background elements can be set with 'background':
+
+p {
+  background-image: url("#");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+===
+p {
+  background: url("#") no-repeat right center;
+}
+
+background-size, cover and contain are the two most common values. contain will most likely cause white space.
+
+    cover - expands the image as large as possible to cover the full width or height of a container. If the dimensions of the container (say, a div) are larger than the dimensions of the image, the image will become distorted. This value is best for images that don't communicate important content to the user, like background images.
+
+    contain - expands the image as large as possible, but the image will be letterboxed, which means it won't cover the full width or height of a container.
+    
+background-attachment, can take one of two values:
+
+    scroll - this value allows the image to move up and down as a user scrolls on the web page (this is the default value).
+    fixed - this value pins the image's position on the page.
+
+When an image communicates important information, you can use the <img> element and style the image using CSS, if needed.
+When an image is intended to style a web page, you can use the background property and further style it with CSS.
 
 
 */
