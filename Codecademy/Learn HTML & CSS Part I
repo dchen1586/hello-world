@@ -1,5 +1,8 @@
 //Common HTML Elements
 
+<meta charset="utf-8"/>: Tells the web browser which character set to use. In this case, the character set is "utf-8". 
+header tags go from h1 to h6
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,6 +29,21 @@
   <a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank"><img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/web101-image_brownbear.jpg" alt="a photo of a brown bear"/></a>
 </body> 
 </html>
+
+video
+<video width="320" height="240" controls>
+  <source src="video-url.mp4" type="video/mp4">
+</video>
+
+The video element uses a number of attributes. Let's take a look at them:
+
+    width and height: Set the size of the screen that displays the video.
+
+    controls: Adds play, pause and volume control.
+
+    source src: Sets the URL of the video to play.
+
+    type: Specifies different video formats.
 
 //Colors, 5
 
@@ -256,6 +274,9 @@ display, can change the behavior of these elements. can take on 4 values:
     inline-block - causes block-level elements to behave like an inline element, but retain the features of a block-level element.
     none - removes an element from view. The rest of the web page will act as if the element does not exist.
   example: list as inline, can become a navigation menu
+    flex - makes all elements align horizontally
+flex-wrap: wrap; prevents elements from falling off the page
+justify-content: center; centers elements
 
 visibility, can take hidden or visible values
 
@@ -392,5 +413,22 @@ table, th, td {
   font-family: Arial, sans-serif;
   text-align: center;
 }
+
+contact-btn a:active {
+:active is a psuedo-class selector, which we use to style an element only while it's being clicked.
+
+&copy is a character code, which web browsers interpret as the copyright symbol: ©
+
+Bootstrap classes:
+
+    row: Arranges HTML elements in rows, and can be useful when building headers/navigation menus, main feature sections, supporting content sections and footers.
+
+    jumbotron: Used to create large showcase sections featuring important content.
+
+    col-sm-*: Used to span a specified number of columns on the Bootstrap grid. The "sm" is short for "small", and maintains desired CSS layouts on small screens (tablet-sized).
+
+    text-right: Bootstrap class used to orient text to the right side of the webpage.
+
+    btn btn-primary: Bootstrap class used to style page elements as buttons.
 
 */
